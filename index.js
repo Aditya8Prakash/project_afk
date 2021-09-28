@@ -18,7 +18,15 @@ var bot = mineflayer.createBot({
     logErrors: connection.logError
 });
 
-bot.on('login', async () => {console.log(`${connection.username} is on at ${connection.host+':'+connection.port}`);});
+bot.on('login', async () => {
+  console.log(`${connection.username} is on at ${connection.host+':'+connection.port}`);
+  bot.chat("/tp bot -235.30000001192093 44.0 -824.4113081741133");
+  bot.chat("/effect clear bot")
+  bot.chat("/effect give bot minecraft:water_breathing 99999 255");
+  bot.chat("/effect give bot 21 99999 10");
+  bot.chat("/attribute bot minecraft:generic.max_health base set 255");
+  bot.chat("/effect give bot minecraft:regeneration 99999 255");
+});
 
 bot.on('physicTick', () => {
   var playerFilter = entity => entity.type === 'player';
@@ -28,5 +36,5 @@ bot.on('physicTick', () => {
   bot.lookAt(pos);
 });
 
-bot.on('kicked', res=>{console.log(res,'bot uptime : '+uptime,'\n\n\n\n\n\n\n\n\n\n');ping=false});
+bot.on('kicked', res=>{console.log(res,'bot uptime : '+uptime,'\n\n\n\n\n\n\n\n\n\n');ping=false;uptime=0});
 bot.on('error', console.log);
