@@ -9,7 +9,7 @@
   "author": "Aditya8Prakash",
   "license": "ISC",
   "dependencies": {
-    "minecraft-data": "^2.89.2",
-    "mineflayer": "^3.9.0"
+    "minecraft-data": "^2.94.0",
+    "mineflayer": "^3.11.2"
   }
 }
