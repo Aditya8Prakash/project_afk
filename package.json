@@ -1,0 +1,15 @@
+{
+  "name": "bot",
+  "version": "0.1.3",
+  "description": "project_afk",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Aditya8Prakash",
+  "license": "ISC",
+  "dependencies": {
+    "minecraft-data": "^2.89.2",
+    "mineflayer": "^3.9.0"
+  }
+}
